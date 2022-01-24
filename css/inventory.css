@@ -10,14 +10,13 @@
     width: 100%;
     height: 100vh;
     gap: 15px;
-    background-color: #93FFD8;
+    background-color: #fff;
 }
 .leftSide{
     background-color: #F8F8FA;
     width: 20%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     gap: 5px;
     height: 100vh;
 }
@@ -48,10 +47,11 @@ hr{
     height: 70px;
     display: flex;
     align-items: center;
+    padding-left: 20px;
     cursor: pointer;
 }
 .column img{
-    width: 60px;
+    width: 40px;
 }
 .column > img{
     padding-left: 30px;
@@ -61,7 +61,7 @@ hr{
     border: none;
     background: none;
 }
-.column > a{
+.side-btn > a{
     display: flex;
     align-items: center;
     padding-left: 10px;
@@ -89,18 +89,14 @@ hr{
 }
 .navbar{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     gap:20px;
     padding-right: 50px;
     padding-top: 20px;
 
 }
-.notif{
-    display: flex;
-    justify-content: space-around;
-    width: 13%;
-}
+
 .notif img{
     width: 30px;
     height: 30px;
@@ -130,7 +126,6 @@ hr{
     justify-content: space-around;
     align-items: center;
     opacity: 0;
-    pointer-events: none;
     transform: translateY(-10px);
     transition: all 0.4s ease;
 }
@@ -223,6 +218,7 @@ table{
     padding: 0px 20px;
     gap: 20px;
     border-radius: 10px;
+    border-collapse: collapse;
 }
 table img{
     width: 20px;
@@ -236,4 +232,61 @@ th , td{
 }
 .action{
     cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+    .leftSide{
+        width: 10%;
+    }
+    .shop{
+        display: none;
+    }
+    .logo{
+        padding-left: 0.313rem;
+    }
+    .column{
+        justify-content: center;
+    }
+    .column > img{
+        width: 30px;
+        padding: 0;
+    }
+    .side-btn a {
+        display: none;
+    }
+    .btn{
+        display: block;
+        padding-left: 20px;
+    }
+    .side-btn a {
+        display: none;
+    }
+    .btn{
+        display: block;
+        padding-left: 20px;
+    }
+}
+@media screen and (max-width: 414px){
+    .leftSide button{
+        padding: 0;
+    }
+    .column{
+        padding: 0;
+    }
+    .column img {
+        width: 31px;
+    }
+    .sub{
+        padding: 15px;
+    }
+    .sub span{
+        font-size: 1rem;
+    }
+    .table tr th{
+        font-size: 0.9rem;
+        padding-right: 5px;
+    }
+    .table tr td{
+        font-size: 0.8rem;
+    }
 }
